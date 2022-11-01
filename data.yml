@@ -17,17 +17,17 @@ jobs:
 locations:
   DWH:
     mappingDefinitions:
-      "2":
+      "3":
         database: DOUG_DB
         schema: QA_DWH
   SRC:
     mappingDefinitions:
-      "2":
+      "3":
         database: SNOWFLAKE_SAMPLE_DATA
         schema: TPCH_SF1
   STAGE:
     mappingDefinitions:
-      "2":
+      "3":
         database: DOUG_DB
         schema: QA_STG
 macros: {}
