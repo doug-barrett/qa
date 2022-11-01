@@ -1,4 +1,4 @@
-defaultStorageMapping: SRC
+defaultStorageMapping: DWH
 jobs:
   Job-1:
     excludeSelector: ""
