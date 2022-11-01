@@ -16,11 +16,20 @@ jobs:
     subgraphs: []
 locations:
   DWH:
-    mappingDefinitions: {}
+    mappingDefinitions:
+      "2":
+        database: DOUG_DB
+        schema: QA_DWH
   SRC:
-    mappingDefinitions: {}
+    mappingDefinitions:
+      "2":
+        database: SNOWFLAKE_SAMPLE_DATA
+        schema: TPCH_SF1
   STAGE:
-    mappingDefinitions: {}
+    mappingDefinitions:
+      "2":
+        database: DOUG_DB
+        schema: QA_STG
 macros: {}
 packages: {}
 projects: {}
