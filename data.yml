@@ -3,14 +3,14 @@ jobs:
   Job-1:
     excludeSelector: ""
     id: 1
-    includeSelector: "{ subgraph: \"STAGING\" }"
+    includeSelector: "{ subgraph: \"STAGING\" } OR { location: STAGE name: STG_SUPPLIER } OR { location: STAGE name: PSTG_SUPPLIER }"
     name: Process Staging
     steps: []
     subgraphs: []
   Job-2:
     excludeSelector: ""
     id: 2
-    includeSelector: "{ subgraph: \"DIMENSIONS\" }"
+    includeSelector: "{ subgraph: \"DIMENSIONS\" } OR { location: DWH name: DIM_SUPPLIER1 } OR { location: DWH name: DIM_CUSTOMER } OR { location: STAGE name: STG_SUPPLIER1 }"
     name: Process Dims
     steps: []
     subgraphs: []
