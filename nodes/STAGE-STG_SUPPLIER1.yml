@@ -1,0 +1,239 @@
+steps:
+  STG_SUPPLIER1-12:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: ""
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 98
+              stepCounter: "12"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PSTG_SUPPLIER_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 84
+                    stepCounter: "11"
+                transform: ""
+          - columnReference:
+              columnCounter: 99
+              stepCounter: "12"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_SUPPKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 85
+                    stepCounter: "11"
+                transform: ""
+          - columnReference:
+              columnCounter: 100
+              stepCounter: "12"
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 86
+                    stepCounter: "11"
+                transform: ""
+          - columnReference:
+              columnCounter: 101
+              stepCounter: "12"
+            dataType: VARCHAR(40)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_ADDRESS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 87
+                    stepCounter: "11"
+                transform: ""
+          - columnReference:
+              columnCounter: 102
+              stepCounter: "12"
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_NATIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 88
+                    stepCounter: "11"
+                transform: ""
+          - columnReference:
+              columnCounter: 103
+              stepCounter: "12"
+            dataType: VARCHAR(15)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_PHONE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 89
+                    stepCounter: "11"
+                transform: ""
+          - columnReference:
+              columnCounter: 104
+              stepCounter: "12"
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_ACCTBAL
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 90
+                    stepCounter: "11"
+                transform: ""
+          - columnReference:
+              columnCounter: 105
+              stepCounter: "12"
+            dataType: VARCHAR(101)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 91
+                    stepCounter: "11"
+                transform: ""
+          - columnReference:
+              columnCounter: 106
+              stepCounter: "12"
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 92
+                    stepCounter: "11"
+                transform: ""
+          - columnReference:
+              columnCounter: 107
+              stepCounter: "12"
+            dataType: VARCHAR
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 93
+                    stepCounter: "11"
+                transform: ""
+          - columnReference:
+              columnCounter: 108
+              stepCounter: "12"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 94
+                    stepCounter: "11"
+                transform: ""
+          - columnReference:
+              columnCounter: 109
+              stepCounter: "12"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 95
+                    stepCounter: "11"
+                transform: ""
+          - columnReference:
+              columnCounter: 110
+              stepCounter: "12"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 96
+                    stepCounter: "11"
+                transform: ""
+          - columnReference:
+              columnCounter: 111
+              stepCounter: "12"
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 97
+                    stepCounter: "11"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PSTG_SUPPLIER: "11"
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: PSTG_SUPPLIER
+            join:
+              joinCondition: |-
+                FROM {{ ref('STAGE', 'PSTG_SUPPLIER') }} "PSTG_SUPPLIER"
+                WHERE "SYSTEM_CURRENT_FLAG" = 'Y'
+            name: STG_SUPPLIER1
+            noLinkRefs: []
+      name: STG_SUPPLIER1
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "12"
