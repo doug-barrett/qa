@@ -57,7 +57,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: S_NAME
+            name: SUPPLIER_NAME
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -71,7 +71,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: S_ADDRESS
+            name: SUPPLIER_ADDRESS
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -85,7 +85,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: S_NATIONKEY
+            name: SUPPLIER_NATIONKEY
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -99,7 +99,7 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: S_PHONE
+            name: SUPPLIER_PHONE
             nullable: false
             sourceColumnReferences:
               - columnReferences:
@@ -114,7 +114,7 @@ steps:
             hashColumns: []
             hashDetails: null
             isChangeTracking: true
-            name: S_ACCTBAL
+            name: SUPPLIER_ACCTBAL
             nullable: false
             sourceColumnReferences:
               - columnReferences:

@@ -47,8 +47,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 1
-                    stepCounter: "1"
+                  - columnCounter: 194
+                    stepCounter: "21"
                 transform: ""
           - columnReference:
               columnCounter: 135
@@ -61,8 +61,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2
-                    stepCounter: "1"
+                  - columnCounter: 195
+                    stepCounter: "21"
                 transform: ""
           - columnReference:
               columnCounter: 136
@@ -75,8 +75,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3
-                    stepCounter: "1"
+                  - columnCounter: 196
+                    stepCounter: "21"
                 transform: ""
           - columnReference:
               columnCounter: 137
@@ -89,8 +89,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 4
-                    stepCounter: "1"
+                  - columnCounter: 197
+                    stepCounter: "21"
                 transform: ""
           - columnReference:
               columnCounter: 138
@@ -103,8 +103,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 5
-                    stepCounter: "1"
+                  - columnCounter: 198
+                    stepCounter: "21"
                 transform: ""
           - columnReference:
               columnCounter: 139
@@ -117,8 +117,8 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 6
-                    stepCounter: "1"
+                  - columnCounter: 199
+                    stepCounter: "21"
                 transform: ""
           - columnReference:
               columnCounter: 140
@@ -131,8 +131,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 7
-                    stepCounter: "1"
+                  - columnCounter: 200
+                    stepCounter: "21"
                 transform: ""
           - columnReference:
               columnCounter: 141
@@ -145,8 +145,8 @@ steps:
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 8
-                    stepCounter: "1"
+                  - columnCounter: 201
+                    stepCounter: "21"
                 transform: ""
           - acceptedValues:
               strictMatch: true
@@ -259,13 +259,15 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              STG_CUSTOMER: "21"
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: SRC
-                nodeName: CUSTOMER
+              - locationName: STAGE
+                nodeName: STG_CUSTOMER
             join:
-              joinCondition: FROM {{ ref('SRC', 'CUSTOMER') }} "CUSTOMER"
+              joinCondition: FROM {{ ref('STAGE', 'STG_CUSTOMER') }} "STG_CUSTOMER"
             name: DIM_CUSTOMER
             noLinkRefs: []
       name: DIM_CUSTOMER

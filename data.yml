@@ -3,7 +3,7 @@ jobs:
   Job-1:
     excludeSelector: ""
     id: 1
-    includeSelector: "{ subgraph: \"STAGING\" } OR { location: STAGE name: STG_SUPPLIER } OR { location: STAGE name: PSTG_SUPPLIER }"
+    includeSelector: "{ subgraph: \"STAGING\" } OR { location: STAGE name: STG_SUPPLIER } OR { location: STAGE name: PSTG_SUPPLIER } OR { subgraph: \"Staging\" }"
     name: Process Staging
     steps: []
     subgraphs: []
@@ -1987,4 +1987,24 @@ subgraphs:
       - "10"
       - "8"
       - "11"
+      - 15
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+      - "21"
+      - "22"
+      - "23"
+      - "24"
+      - "25"
+      - "26"
+      - "27"
+      - "1"
+      - "15"
+      - "16"
+      - "17"
+      - "18"
+      - "19"
+      - "20"
 version: 1
